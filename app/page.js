@@ -33,7 +33,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <a href="/projects" className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+          <a href="/Portfolio/projects" className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
             View My Work
           </a>
         </motion.div>

@@ -7,19 +7,13 @@ const projects = [
     title: "Pokedex App",
     description: "A fully responsive Pokedex using the Pokémon API.",
     tech: "API-Based",
-    link: "https://yourpokedex.com",
+    link: "https://avinashraj28.github.io/pokedex-project/",
   },
   {
     title: "Password Manager",
     description: "A secure password manager with encryption.",
     tech: "React & LocalStorage",
-    link: "https://yourpasswordmanager.com",
-  },
-  {
-    title: "Portfolio Website",
-    description: "My personal portfolio showcasing my skills and projects.",
-    tech: "Next.js & Tailwind",
-    link: "https://yourportfolio.com",
+    link: "https://avinashraj28.github.io/password-manager/",
   },
   {
     title: "Weather App",
@@ -37,7 +31,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen pt-20 bg-black text-white px-6">
+    <div className="min-h-screen pt-20 bg-white dark:bg-black text-black dark:text-white px-6">
       <motion.h1
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -54,18 +48,20 @@ export default function Projects() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: index * 0.2 }}
-            className="bg-gray-900 shadow-lg p-6 rounded-lg text-center border border-gray-700"
+            className="bg-gray-200 dark:bg-gray-900 shadow-lg p-6 rounded-lg text-center border border-gray-300 dark:border-gray-700"
           >
             <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
-            <p className="text-gray-400 mb-4">{project.description}</p>
-            <span className="inline-block bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              {project.description}
+            </p>
+            <span className="inline-block bg-gray-300 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">
               {project.tech}
             </span>
             <div className="mt-4">
               <Link
                 href={project.link}
                 target="_blank"
-                className="text-blue-400 hover:underline"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
               >
                 View Project →
               </Link>
